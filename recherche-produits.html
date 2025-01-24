@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recherche de Matières Premières Pharmaceutiques</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recherche.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation identique aux autres pages -->
+    </header>
+
+    <main>
+        <h1>Recherche Avancée de Matières Premières</h1>
+        
+        <div class="recherche-container">
+            <div class="filtres-section">
+                <h2>Filtres de Recherche</h2>
+                
+                <div class="filtre-groupe">
+                    <h3>Catégories Chimiques</h3>
+                    <select multiple>
+                        <option>Sels</option>
+                        <option>Bases</option>
+                        <option>Acides</option>
+                        <option>Solvants</option>
+                        <option>Polymères</option>
+                    </select>
+                </div>
+
+                <div class="filtre-groupe">
+                    <h3>Caractéristiques Physico-Chimiques</h3>
+                    <div class="sous-filtres">
+                        <label>
+                            Point de fusion (°C)
+                            <input type="range" min="0" max="500" step="10">
+                        </label>
+                        <label>
+                            pH
+                            <input type="range" min="0" max="14" step="0.5">
+                        </label>
+                        <label>
+                            Masse Moléculaire (g/mol)
+                            <input type="number" placeholder="Min">
+                            <input type="number" placeholder="Max">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filtre-groupe">
+                    <h3>Structure Chimique</h3>
+                    <div class="sous-filtres">
+                        <input type="text" placeholder="Formule brute">
+                        <select>
+                            <option>Groupe fonctionnel</option>
+                            <option>Alcool</option>
+                            <option>Acide carboxylique</option>
+                            <option>Amine</option>
+                            <option>Cétone</option>
+                        </select>
+                        <label>Dessiner la structure
+                            <button>Ouvrir éditeur moléculaire</button>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filtre-groupe">
+                    <h3>Normes Réglementaires</h3>
+                    <div class="checkboxes">
+                        <label><input type="checkbox"> USP</label>
+                        <label><input type="checkbox"> EP</label>
+                        <label><input type="checkbox"> BP</label>
+                        <label><input type="checkbox"> ISO</label>
+                    </div>
+                </div>
+
+                <div class="filtre-groupe">
+                    <h3>Critères Économiques</h3>
+                    <div class="sous-filtres">
+                        <label>Prix (€/kg)
+                            <input type="range" min="0" max="1000" step="10">
+                        </label>
+                        <label>Quantité min. commande (kg)
+                            <input type="number">
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn-recherche">Rechercher</button>
+            </div>
+
+            <div class="resultats-section">
+                <h2>Résultats de Recherche</h2>
+                <div class="liste-produits">
+                    <!-- Résultats dynamiques s'afficheront ici -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer identique aux autres pages -->
+    </footer>
+
+    <script src="recherche.js"></script>
+</body>
+</html>
